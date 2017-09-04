@@ -1,10 +1,9 @@
 package com.arron.pattern;
 
 public class Main {
-	
-	public static void main(String[] args){
-		System.out.print("test");
-	}
-	
-	
+
+    public static void main(String[] args) {
+        System.out.print("test");
+    }
+
 }
