@@ -13,7 +13,7 @@ public class TestCommandPattern {
         closeCommand.setReceiver(new Light());
         closeCommand.execute();
         
-        //上面的调用还是复制了，可以再封装一个调用者，批量调用命令
+        //上面的调用还是复杂了，可以再封装一个调用者，批量调用命令
         //在调用者中可以对这些命令进行排序记录控制，以及回退等控制操作
         
         Invoker invoker = new Invoker();
