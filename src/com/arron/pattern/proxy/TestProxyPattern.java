@@ -1,4 +1,4 @@
-package com.arron.pattern.agent;
+package com.arron.pattern.proxy;
 
 import java.lang.reflect.Proxy;
 
