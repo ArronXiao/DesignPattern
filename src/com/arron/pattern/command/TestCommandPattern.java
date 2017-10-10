@@ -20,7 +20,7 @@ public class TestCommandPattern {
         invoker.addCommand(openCommand);
         invoker.addCommand(closeCommand);
         
-        invoker.ExcuteCommand();
+        invoker.excuteCommand();
         
         //命令模式的有趣的地方在于，正常的功能类(也就具体的执行者)是不知道有命令这么回事存在的，
         //是命令依赖于具体的执行者，而不是执行者要知道命令.这样就可以大胆放心的实现具体的功能，该怎么做就怎么做，后期有需要使用命令模式再说．

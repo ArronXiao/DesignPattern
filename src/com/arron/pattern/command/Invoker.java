@@ -10,7 +10,7 @@ public class Invoker {
         baseCommands.add(baseCommand);
     }
     
-    public void ExcuteCommand() {
+    public void excuteCommand() {
         for(BaseCommand command: baseCommands) {
             command.execute();
         }
