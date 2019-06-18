@@ -1,5 +1,8 @@
 package com.arron.pattern.dutychain;
 
+import java.util.regex.Matcher;
+import java.util.regex.Pattern;
+
 import com.arron.pattern.utils.Log;
 
 public class TestDutychainPattern {
@@ -21,6 +24,20 @@ public class TestDutychainPattern {
         loader.setUrl(null);
         loadernext.setUrl("test2");
         Log.d("第一级责任人没有处理 "+loader.getUrl());
- 
+        
+        
+        String source = "this---is a test abcd abcd ef";
+        String pattern = "(?<=-+)is";
+        // 创建 Pattern 对象
+        Pattern r = Pattern.compile(pattern);
+        Matcher m = r.matcher(source);
+        while (m.find()) {
+            int groupCount = m.groupCount();
+            System.out.println("groupCount: " + groupCount);
+            for(int i=0; i < groupCount + 1 ; i++) {
+                System.out.println("group: "+ i + " ----> " + m.group(i));
+            }
+          
+        }
     }
 }

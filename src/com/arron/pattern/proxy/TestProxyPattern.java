@@ -12,11 +12,11 @@ public class TestProxyPattern {
         
         
         //静态代理的类需要在编译的时候就确定来类的关系，当有很多类需要被代理处理一遍的的时候，就比较麻烦，使用动态代理
-        Print realPrint = new RealPrint();
-        DynamicProxyHandler dynamicProxy = new DynamicProxyHandler(realPrint);
+//        Print realPrint = new RealPrint();
+        DynamicProxyHandler dynamicProxy = new DynamicProxyHandler();
         
-        Print print = (Print)Proxy.newProxyInstance(dynamicProxy.getClass().getClassLoader(), realPrint.getClass().getInterfaces(), dynamicProxy);
-        print.print("动态代理 I LOVE YOU");
+        Print print = (Print)Proxy.newProxyInstance(dynamicProxy.getClass().getClassLoader(), new Class[] {Print.class}, dynamicProxy);
+        System.out.println("" + print.print("动态代理 I LOVE YOU"));
     }
 
 }

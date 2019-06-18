@@ -2,5 +2,5 @@ package com.arron.pattern.proxy;
 
 public interface Print {
 
-    public void print(String str);
+    public String print(String str);
 }
